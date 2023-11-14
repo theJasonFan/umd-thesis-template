@@ -102,10 +102,12 @@ A citation~\cite{fan2022}.
 \lipsum[1]
 
 %% Appendix
-\renewcommand{\thechapter}{A}
+\appendix
+\setcounter{chapter}{0}
 \renewcommand{\chaptername}{Appendix}
+\renewcommand{\thechapter}{\Alph{chapter}}
 \titleformat{\chapter}{\normalfont\large}{Appendix \thechapter:}{1em}{}
-%\include{AppendixA}
+
 \chapter{Lorem}
 A citation~\cite{fan2022}.
 \lipsum[3]
