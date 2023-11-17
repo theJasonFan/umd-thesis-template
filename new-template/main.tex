@@ -1,0 +1,146 @@
+\documentclass{thesis}
+\author{Jason Fan}
+\title{THESIS TITLE}
+\advisor{Rob Patro, Associate Professor}
+\department{Department of Computer Science}
+
+\committee{
+    \@advisor, Chair\\
+    Najib El-Sayed, Professor, Dean's Representative\\
+    Erin Molloy, Associate Professor
+}
+
+\usepackage{lipsum} 
+
+\usepackage[sort,square,numbers]{natbib}
+
+\usepackage{fontspec} % better font compatibility, modern LaTeX idiom
+\setmainfont{Times New Roman}
+
+\usepackage{graphicx} % for \includegraphics (figures)
+\usepackage{csquotes} % modern idiomatic quotation marks.
+
+\usepackage[onehalfspacing]{setspace} % Need this for
+
+% ref packages must be last
+\usepackage[colorlinks=true,urlcolor=black,linkcolor=blue,citecolor=blue,debug=true]{hyperref}
+\usepackage{cleveref}
+
+\begin{document}
+
+\begin{abstract}
+    \lipsum[1-3]
+\end{abstract}
+
+\maketitlepage
+\makecopyrightpage
+
+\frontmatter
+
+\frontsection{Dedication}
+\texttt{frontsection\{Dedication\}} adds page title for front matter.
+
+Text is double spaced.
+
+Use \texttt{clearpage} for page break.
+
+\clearpage
+
+\frontsection{Other front matter section}
+Another front matter section looks like this.
+
+\lipsum[1]
+\clearpage
+
+\maketoc %(required, lower-case Roman)
+
+\mainmatter
+
+\chapter{Using this thesis template}
+\label{chap:1}
+
+\section{Citations}
+\label{sec:1}
+
+An in line citation \citep{fan2022} published by \citet{fan2022}. Use \texttt{citep} and \texttt{citet}.\footnote{Footnotes look like this.\\ (Multiline...)}
+
+Cross-ref using \texttt{cref}. E.g., \cref{tab:1} \cref{fig:1}, \cref{sec:1}, \cref{chap:1}
+
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{ c c c }
+     cell1 & cell2 & cell3 \\ 
+     cell4 & cell5 & cell6 \\  
+     cell7 & cell8 & cell9    
+    \end{tabular}
+\end{center}
+\caption{An example table. \lipsum[1]}
+\label{tab:1}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{example-image-a}
+    \caption{An example figure. \lipsum[1]}
+    \label{fig:1}
+\end{figure}
+
+
+\section{Section}
+\subsection{Sub-section}
+\subsubsection{Sub-sub-section}
+
+\chapter{Another Name}
+\lipsum[1-2]
+\section{Section}
+\lipsum[1]
+\subsection{Sub-section}
+\lipsum[5]
+\subsubsection{Sub-sub-section}
+\lipsum[1]
+\paragraph{paragraph}
+\lipsum[1]
+
+
+
+\appendix % Start appendix numbering etc.
+
+\chapter{Appendix}
+\section{Section}
+\lipsum[1]
+\subsection{Sub-section}
+\lipsum[5]
+\subsubsection{Sub-sub-section}
+\lipsum[1]
+\paragraph{Paragraph.}
+\lipsum[1]
+
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{ c c c }
+         cell1 & cell2 & cell3 \\ 
+         cell4 & cell5 & cell6 \\  
+         cell7 & cell8 & cell9    
+        \end{tabular}
+    \end{center}
+    \caption{An example table. \lipsum[1]}
+    \label{tab:1}
+    \end{table}
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{example-image-a}
+        \caption{An example figure. \lipsum[1]}
+        \label{fig:1}
+    \end{figure}
+
+
+
+% single spaced bibliography and add TOC ref.
+\renewcommand{\baselinestretch}{1}
+\normalsize
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{unsrtnat}
+\bibliography{bib}
+
+\end{document}
